@@ -1,21 +1,23 @@
-#ifndef C_H
-#define C_H
+#ifndef S_H
+#define S_H
 #include<string>
 #include<iostream>
 #include<iomanip>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
-class Card {
+class Sum {
 public:
-	Card(string,int);
-	void setColor(string);
+	Sum(int, int);
+	void setColor(int);
 	string getColor();
 	void setMath(int);
 	int getMath();
 	void setSum(int);
 	int getSum();
-	void print();
 private:
 	string color;
-	int math,sum;
+	int math, sum;
+	int cardArray[4][13];
 };
 #endif
