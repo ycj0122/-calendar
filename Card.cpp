@@ -22,5 +22,12 @@ int Card::getSum() {
 	return sum ;
 }
 void Card::print() {
-	cout << "目前點數:" << getSum() << endl;
+	if (sum <= 21) {
+		cout << "目前點數:" << getSum() << endl 
+			<< "是否加牌?\n是請輸入1\n否請輸入0" << endl;
+	}
+	else {
+		cout << "Game Over" << endl
+			<< "目前點數:" << getSum() << endl;
+	}
 }
