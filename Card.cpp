@@ -19,8 +19,8 @@ void Card::setSum(int sum) {
 	this->sum = sum;
 }
 int Card::getSum() {
-	return sum+math;
+	return sum ;
 }
 void Card::print() {
-	cout << "current points:" << getSum() << endl;
+	cout << "目前點數:" << getSum() << endl;
 }
