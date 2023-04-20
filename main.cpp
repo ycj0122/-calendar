@@ -15,14 +15,11 @@ int main() {
 		card.setSum(total);
 		card.print();
 		if (total <= 21) {
-			cout << "是否加牌?\n是請輸入1\n否請輸入0" << endl;
 			cin >> x;
 		}
 		else {
-			cout << "Game Over" << endl;
 			x = 0;
 		}
-
 	}
 	return 0;
 }
