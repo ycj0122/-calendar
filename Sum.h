@@ -8,8 +8,9 @@
 using namespace std;
 class Sum {
 public:
-	Sum(int, int);
-	void setColor(int);
+	Sum();
+	Sum(string, int);
+	void setColor(string);
 	string getColor();
 	void setMath(int);
 	int getMath();
@@ -18,6 +19,5 @@ public:
 private:
 	string color;
 	int math, sum;
-	int cardArray[4][13];
 };
 #endif
