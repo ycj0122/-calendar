@@ -1,29 +1,33 @@
 #include"Sum.h"
-Sum::Sum(string color, int math) {
-	this->color = color;
-	this->math = math;
+Sum::Sum() {
+	card = "黑桃 A";
 }
-void Sum::setColor(string color) {
-	this->color = color;
+Sum::Sum(string card) {
+	this->card = card;
+}
+void Sum::setCard(string card) {
+	this->card = card;
+	stringstream ss(card);
+	int i = 0;
+	while (!ss.eof()) {
+		ss >> word[i];
+		i++;
+	}
+	if (word[1] == "J" || word[1] == "Q" || word[1] == "K")
+		math = 10;
+	else if (word[1] == "A") {
+		cout << "A為1 or 11?" << endl;
+		int a;
+		cin >> a;
+		math = a;
+	}
+	else
+		math = stoi(word[1]);
 }
 string Sum::getColor() {
-	return color;
-}
-void Sum::setMath(int math) {
-	this->math = math;
+	return word[0];
 }
 int Sum::getMath() {
-	int a;
-	if (math == 11 || math == 12 || math == 13)
-		math = 10;
-	else if (math == 1) {
-		cout << "A為1 or 11?" << endl;
-		cin >> a;
-		if (a == 1)
-			math = 1;
-		else
-			math = 11;
-	}
 	return math;
 }
 void Sum::setSum(int sum) {
@@ -31,4 +35,7 @@ void Sum::setSum(int sum) {
 }
 int Sum::getSum() {
 	return sum;
+}
+void Sum::print() {
+	cout << card << endl << "目前點數:" << getSum() << endl;
 }
