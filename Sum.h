@@ -5,19 +5,22 @@
 #include<iomanip>
 #include<cstdlib>
 #include<ctime>
+#include<sstream>
+#include<algorithm>
 using namespace std;
 class Sum {
 public:
 	Sum();
-	Sum(string, int);
-	void setColor(string);
+	Sum(string);
+	void setCard(string);
 	string getColor();
-	void setMath(int);
 	int getMath();
 	void setSum(int);
 	int getSum();
+	void print();
 private:
-	string color;
+	string color, card;
 	int math, sum;
+	string word[2];
 };
 #endif
