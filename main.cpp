@@ -38,7 +38,7 @@ int main() {
 	int total = 0, x = 1;
 	Card(cardArray);
 	srand(time(0));
-	while (x != 0) { //抽牌並帶入加總物件
+	while (x != 0) {		//抽牌並帶入加總物件
 		if (total > 21) {
 			cout << "Game Over\n";
 			x = 0;
@@ -55,6 +55,6 @@ int main() {
 			}
 		}	
 	}
-		cout << "總點數:" << total << endl;
+	cout << "總點數:" << total << endl;
 	return 0;
 }
