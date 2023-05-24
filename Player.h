@@ -1,17 +1,26 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
+#include <string>
+#include <vector>
 #include "Sum.h"
+
+using namespace std; 
 
 class Player {
 public:
-Player(); // 初始化
-void hit(Card &card); // 玩家補牌
-void printCards(); // 列印所有牌
-int getSum(); // 取得牌點數總和
-bool isBust(); // 是否爆牌
-void reset(); // 重置牌局
+    Player();
+    Player(const string& name);
+    void setName(const string& name);
+    string getName() const;
+    void addCard(const string& card);增加牌
+    void clearCards();清牌
+    int getTotalSum() const;拿到的點數
+    void printCards() const;
+
 private:
-vector<Card> cards; // 玩家的牌
+    string name;
+    vector<Sum> cards;
 };
 
 #endif
