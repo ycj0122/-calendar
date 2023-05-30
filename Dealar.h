@@ -16,5 +16,4 @@ public:
 private:
 	vector<Sum> cards;
 };
-
 #endif
