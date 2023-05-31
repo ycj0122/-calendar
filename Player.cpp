@@ -1,19 +1,6 @@
 #include "Player.h"
 
 Player::Player() {
-    name = "Player";
-}
-
-Player::Player(const string& name) {
-    this->name = name;
-}
-
-void Player::setName(const string& name) {
-    this->name = name;
-}
-
-string Player::getName() const {
-    return name;
 }
 
 void Player::addCard(const string& card) {
@@ -21,11 +8,7 @@ void Player::addCard(const string& card) {
     cards.push_back(newCard);
 }
 
-void Player::clearCards() {
-    cards.clear();
-}
-
-int Player::getTotalSum() const {
+bool Player::getTotalSum() const {
     int totalSum = 0;
     int numOfAces = 0;
 
