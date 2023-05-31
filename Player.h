@@ -10,12 +10,8 @@ using namespace std;
 class Player {
 public:
     Player();
-    Player(const string& name);
-    void setName(const string& name);
-    string getName() const;
     void addCard(const string& card);增加牌
-    void clearCards();清牌
-    int getTotalSum() const;拿到的點數
+    bool getTotalSum() const;拿到的點數
     void printCards() const;
 
 private:
