@@ -1,30 +1,25 @@
-#include "Dealer.h"
+#include"Dealer.h"
+Dealer::Dealer() {
 
-Dealer::Dealer() {}
-
-void Dealer::printCards() {
-	cout << "Dealer's Cards: " << endl;
-	for (const Sum& card : cards) {
-		card.print();
-	}
 }
-
-int Dealer::getSum() {
-	int total = 0;
-	for (const Sum& card : cards) {
-		total += card.getMath();
-	}
-	return total;
+Dealer::Dealer(string card) {
+    setCard(card);
 }
-
-int Dealer::getNumCards() {
-	return cards.size();
+void Dealer::setCard(string card) {		//抽到的牌
+    this->card = card;
 }
-
-bool Dealer::isBust() {
-	return getSum() > 21;
+string Dealer::getCard()const {
+    return card;
 }
-
-void Dealer::reset() {
-	cards.clear();
+void Dealer::setNowpoint(int point) {    //目前點數
+    this->point = point;
+}
+int Dealer::getNowpont() {
+    return point;
+}
+void Dealer::setTotalpoint(int point) {        //總點數
+    this->point = point;
+}
+int Dealer::getTotalpoint() {
+    return point;
 }
