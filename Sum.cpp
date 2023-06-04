@@ -34,8 +34,6 @@ void Sum::setSum(int sum) {
 	this->sum = sum;
 }
 int Sum::getSum() {
+	sum += getMath();
 	return sum;
-}
-void Sum::print() {
-	cout << card << endl << "目前點數:" << getSum() << endl;
 }
