@@ -1,22 +1,22 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-
 #include <string>
-#include <vector>
+#include <iostream>
 #include "Sum.h"
-
-using namespace std; 
-
+using namespace std;
 class Player {
 public:
     Player();
-    void addCard(const string& card); //增加牌
-    bool getTotalSum() const; //拿到的點數
-    void printCards() const;
-
+    Player(string);
+    void setCard(string);//抽到的牌
+    string getCard()const;
+    void setNowpoint(int);//目前點數
+    int getNowpont();
+    void setTotalpoint(int);//總點數
+    int getTotalpoint();
 private:
-    string name;
-    vector<Sum> cards;
+    string card;
+    string cardArray[5];
+    int point, totalpoint;
 };
-
 #endif
