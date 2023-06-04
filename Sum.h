@@ -17,7 +17,7 @@ public:
 	int getMath();
 	void setSum(int);
 	int getSum();
-	void print();
+	//	void print();
 private:
 	string color, card;
 	int math, sum;
