@@ -7,12 +7,12 @@ using namespace std;
 class Dealer {
 public:
     Dealer();
-    Dealer(string);
-    void setCard(string);//抽到的牌
+    Dealer(string Card);
+    void setCard(string Card);//抽到的牌
     string getCard()const;
-    void setNowpoint(int);//目前點數
+    void setNowpoint(int point);//目前點數
     int getNowpont();
-    void setTotalpoint(int);//總點數
+    void setTotalpoint(int point);//總點數
     int getTotalpoint();
 private:
     string card;
